@@ -1,0 +1,347 @@
+/*
+Theme Name: nathalie_mota
+Theme URI: https://votresite.com
+Author: Vanessa Demaecker
+Author URI: https://votresite.com
+Description: Un thème WordPress personnalisé pour une photographe freelance, conçu pour mettre en valeur les photos et le portfolio d'une photographe.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nathalie_mota
+Tags: photographie, portfolio, freelance, responsive, minimaliste
+*/
+
+/* Importation typographie */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Réinitialisation des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: #FFFFFF;
+    font-family: 'Space Mono', monospace;
+    margin: 0 auto;
+}
+
+/* Modale de contact */
+.modal.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.modal {
+    display: none; /* Masquer par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+}
+
+/* Contenu de la modale */
+.modal-content {
+    width: 597px;
+    height: 835px;
+    background-color: #fff;
+    border: 5px solid #000000;
+    display: flex;
+    flex-direction: column; /* Empiler les éléments verticalement */
+    align-items: center; /* Centrer horizontalement les éléments */
+}
+
+/* Image en haut de la modale */
+.modal-image {
+    padding-top: 20px;
+}
+
+/* Style du formulaire */
+#wpforms-48-field_3-container,
+#wpforms-48-field_4-container,
+#wpforms-48-field_5-container,
+#wpforms-48-field_6-container {
+    display: flex;
+    flex-direction: column; /* Empiler les éléments verticalement */
+    align-items: center; /* Centrer les éléments horizontalement */
+}
+
+/* Champs de texte et textarea */
+#wpforms-48-field_3 {
+    height: 210px;
+    width: 263px; /* Limiter à 263px de large */
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+}
+
+#wpforms-48-field_4,
+#wpforms-48-field_5,
+#wpforms-48-field_6 {
+    height: 40px;
+    width: 263px;
+    border-radius: 8px;
+    border: 1px solid #B8BBC2;
+}
+
+/* Style des labels */
+label.wpforms-field-label {
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #313144;
+}
+
+/* Conteneur du formulaire */
+.wpforms-container {
+    display: flex;
+    flex-direction: column; /* Empiler les éléments verticalement */
+    align-items: center; /* Centrer les éléments horizontalement */
+    justify-content: center; /* Centrer les éléments verticalement */
+    background-color: aquamarine;
+
+}
+
+/* Style du bouton de soumission */
+#wpforms-submit-48 {
+    width: 263px; /* Limiter à 263px de large */
+    height: 50px;
+    padding: 8px 15px;
+    border-radius: 2px;
+    background-color: #D8D8D8;
+    border: transparent;
+    color: #000;
+    margin-top: 20px; /* Espacement au-dessus du bouton */
+    cursor: pointer;
+    align-self: center; /* Centrer le bouton dans son conteneur */
+    display: block; /* S'assurer que le bouton est un élément de bloc */
+    margin: 0 auto;
+}
+
+/* Changement de couleur au survol */
+#wpforms-submit-48:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Header */
+.container-header {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 100px;
+}
+
+.header-logo {
+    width: 50%;
+}
+
+.header-logo img {
+    height: 14px;
+    max-width: 214px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: right;
+    width: 50%;
+}
+
+.header-menu li {
+    list-style: none;
+}
+
+.header-menu a {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+    padding-left: 40px;
+    transition: all 0.3s;
+}
+
+.header-menu a:hover {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    height: 80px; /* Augmente la hauteur pour donner plus d'espace */
+    border-top: 1px solid #000; /* Ligne de séparation */
+    display: flex; /* Active un conteneur flex pour l'alignement */
+    justify-content: center; /* Centre horizontalement les éléments */
+    align-items: center; /* Centre verticalement */
+}
+
+.footer-menu {
+    display: flex;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+}
+
+.footer-links li {
+    margin-right: 30px;
+}
+
+.footer-links a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.footer-links a:hover {
+    font-weight: 900;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Utilise toute la hauteur de la fenêtre */
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero a {
+    text-decoration: none;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* L'image couvre entièrement la zone */
+    background-position: center center; /* L'image est centrée */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 96px;
+    font-style: italic;
+    font-weight: 700;
+    color: transparent;
+    text-align: center;
+    -webkit-text-stroke: 3px #ffffff; /* Bordure blanche autour du texte */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Contener main : global */
+main {
+    width: 100%;
+    max-width: 1148px; /* Ajustez en fonction de la largeur souhaitée */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Liste des photos */
+.gallery.custom-size {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px; /* Espace entre les images */
+    margin: 0 auto; /* Centre la galerie horizontalement */
+}
+
+.thumbnail {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: calc(495 / 564 * 100%); /* Rapport hauteur / largeur pour maintenir les proportions */
+    overflow: hidden;
+}
+
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste la taille de l'image pour remplir le conteneur avec les proportions */
+}
+
+#load-more-container {
+    text-align: center;
+}
+
+#load-more {
+    width: 272px;
+    height: 50px;
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 8px 15px;
+    border: transparent;
+}
+
+#load-more a {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+}
+
+#load-more:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5;
+}
+
+/* Conteneur principal */
+#filter-container {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Filtres à gauche, tri à droite */
+    align-items: center; /* Aligne verticalement les éléments */
+    gap: 20px; /* Espacement global entre les groupes */
+    margin: 20px 0; /* Espacement supérieur et inférieur */
+    flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si nécessaire */
+}
+
+/* Groupe des filtres à gauche */
+.left-filters {
+    display: flex; /* Flexbox pour aligner les deux menus côte à côte */
+    gap: 20px; /* Espacement entre les deux selects */
+}
+
+/* Groupe du tri à droite */
+.right-filters {
+    display: flex;
+    justify-content: flex-end; /* Place le tri à l'extrême droite */
+}
+
+/* Styles pour tous les selects */
+#filter-category,
+#filter-format,
+#order {
+    width: 260px;
+    height: 43px;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #fff;
+    border: 1.3px solid #B8BBC2;
+    color: #333;
+    text-align: left;
+    appearance: none; /* Supprime le style par défaut */
+    cursor: pointer;
+}
